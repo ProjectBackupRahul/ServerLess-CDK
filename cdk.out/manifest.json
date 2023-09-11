@@ -1,0 +1,252 @@
+{
+  "version": "21.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CdklamdaStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdklamdaStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/CdklamdaStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc",
+              "id": "d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc",
+              "packaging": "zip",
+              "sourceHash": "d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc",
+              "s3BucketParameter": "AssetParametersd34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713ccS3Bucket123EB8CD",
+              "s3KeyParameter": "AssetParametersd34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713ccS3VersionKey7E11D12C",
+              "artifactHashParameter": "AssetParametersd34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713ccArtifactHash2EA9EC0E"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:202:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:98:25)",
+              "CdklamdaStack.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack.js:473:33)",
+              "/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:103:59",
+              "withoutDeprecationWarnings (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:229:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:103:20)",
+              "new Asset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:46:44)",
+              "AssetCode.bind (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-lambda/lib/code.js:277:26)",
+              "new Function (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-lambda/lib/function.js:114:33)",
+              "new MyLambda (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/my_lambda.js:12:25)",
+              "new CdklamdaStack (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/cdklamda-stack.js:18:5)",
+              "Object.<anonymous> (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/bin/cdklamda.js:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1256:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1310:10)",
+              "Module.load (node:internal/modules/cjs/loader:1119:32)",
+              "Module._load (node:internal/modules/cjs/loader:960:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/CdklamdaStack/MyLambda/Store/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaStore367FEE0E",
+            "trace": [
+              "new Bucket (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-s3/lib/bucket.js:666:26)",
+              "new MyLambda (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/my_lambda.js:10:24)",
+              "new CdklamdaStack (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/cdklamda-stack.js:18:5)",
+              "Object.<anonymous> (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/bin/cdklamda.js:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1256:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1310:10)",
+              "Module.load (node:internal/modules/cjs/loader:1119:32)",
+              "Module._load (node:internal/modules/cjs/loader:960:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/CdklamdaStack/MyLambda/Handler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaHandlerServiceRoleDB13C18A",
+            "trace": [
+              "new Role (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-iam/lib/role.js:63:22)",
+              "new Function (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-lambda/lib/function.js:97:35)",
+              "new MyLambda (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/my_lambda.js:12:25)",
+              "new CdklamdaStack (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/cdklamda-stack.js:18:5)",
+              "Object.<anonymous> (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/bin/cdklamda.js:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1256:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1310:10)",
+              "Module.load (node:internal/modules/cjs/loader:1119:32)",
+              "Module._load (node:internal/modules/cjs/loader:960:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/CdklamdaStack/MyLambda/Handler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaHandlerServiceRoleDefaultPolicy00A48C54",
+            "trace": [
+              "new Policy (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-iam/lib/policy.js:57:26)",
+              "Role.addToPrincipalPolicy (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-iam/lib/role.js:247:34)",
+              "Grant.addToPrincipal (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-iam/lib/grant.js:102:65)",
+              "Grant.addToPrincipalOrResource (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-iam/lib/grant.js:50:30)",
+              "Bucket.grant (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-s3/lib/bucket.js:487:31)",
+              "Bucket.grantReadWrite (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-s3/lib/bucket.js:335:21)",
+              "new MyLambda (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/my_lambda.js:20:18)",
+              "new CdklamdaStack (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/cdklamda-stack.js:18:5)",
+              "Object.<anonymous> (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/bin/cdklamda.js:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1256:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1310:10)",
+              "Module.load (node:internal/modules/cjs/loader:1119:32)",
+              "Module._load (node:internal/modules/cjs/loader:960:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/CdklamdaStack/MyLambda/Handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyLambdaHandler921772E9",
+            "trace": [
+              "new Function (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-lambda/lib/function.js:172:26)",
+              "new MyLambda (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/my_lambda.js:12:25)",
+              "new CdklamdaStack (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/cdklamda-stack.js:18:5)",
+              "Object.<anonymous> (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/bin/cdklamda.js:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1256:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1310:10)",
+              "Module.load (node:internal/modules/cjs/loader:1119:32)",
+              "Module._load (node:internal/modules/cjs/loader:960:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/CdklamdaStack/AssetParameters/d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersd34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713ccS3Bucket123EB8CD",
+            "trace": [
+              "new FileAssetParameters (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:189:22)",
+              "LegacyStackSynthesizer.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:98:25)",
+              "CdklamdaStack.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack.js:473:33)",
+              "/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:103:59",
+              "withoutDeprecationWarnings (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:229:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:103:20)",
+              "new Asset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:46:44)",
+              "AssetCode.bind (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-lambda/lib/code.js:277:26)",
+              "new Function (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-lambda/lib/function.js:114:33)",
+              "new MyLambda (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/my_lambda.js:12:25)",
+              "new CdklamdaStack (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/cdklamda-stack.js:18:5)",
+              "Object.<anonymous> (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/bin/cdklamda.js:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1256:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1310:10)",
+              "Module.load (node:internal/modules/cjs/loader:1119:32)",
+              "Module._load (node:internal/modules/cjs/loader:960:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/CdklamdaStack/AssetParameters/d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersd34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713ccS3VersionKey7E11D12C",
+            "trace": [
+              "new FileAssetParameters (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:189:22)",
+              "LegacyStackSynthesizer.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:98:25)",
+              "CdklamdaStack.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack.js:473:33)",
+              "/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:103:59",
+              "withoutDeprecationWarnings (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:229:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:103:20)",
+              "new Asset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:46:44)",
+              "AssetCode.bind (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-lambda/lib/code.js:277:26)",
+              "new Function (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-lambda/lib/function.js:114:33)",
+              "new MyLambda (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/my_lambda.js:12:25)",
+              "new CdklamdaStack (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/cdklamda-stack.js:18:5)",
+              "Object.<anonymous> (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/bin/cdklamda.js:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1256:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1310:10)",
+              "Module.load (node:internal/modules/cjs/loader:1119:32)",
+              "Module._load (node:internal/modules/cjs/loader:960:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/CdklamdaStack/AssetParameters/d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersd34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713ccArtifactHash2EA9EC0E",
+            "trace": [
+              "new FileAssetParameters (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:189:22)",
+              "LegacyStackSynthesizer.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:98:25)",
+              "CdklamdaStack.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack.js:473:33)",
+              "/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:103:59",
+              "withoutDeprecationWarnings (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:229:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.js:103:20)",
+              "new Asset (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.js:46:44)",
+              "AssetCode.bind (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-lambda/lib/code.js:277:26)",
+              "new Function (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/aws-lambda/lib/function.js:114:33)",
+              "new MyLambda (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/my_lambda.js:12:25)",
+              "new CdklamdaStack (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/lib/cdklamda-stack.js:18:5)",
+              "Object.<anonymous> (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/bin/cdklamda.js:7:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1256:14)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1310:10)",
+              "Module.load (node:internal/modules/cjs/loader:1119:32)",
+              "Module._load (node:internal/modules/cjs/loader:960:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:23:47"
+            ]
+          }
+        ],
+        "/CdklamdaStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)",
+              "/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stage.js:104:41)",
+              "process.<anonymous> (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/app.js:58:51)",
+              "Object.onceWrapper (node:events:629:26)",
+              "process.emit (node:events:514:28)"
+            ]
+          }
+        ],
+        "/CdklamdaStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:30:35)",
+              "/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/synthesis.js:139:9",
+              "visit (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/synthesis.js:200:9)",
+              "visit (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/synthesis.js:197:9)",
+              "injectMetadataResources (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/synthesis.js:128:5)",
+              "Object.synthesize (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/private/synthesis.js:17:5)",
+              "App.synth (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/stage.js:104:41)",
+              "process.<anonymous> (/home/rahul/devRahul/AWS-CLI/dev/cdklamda/node_modules/@aws-cdk/core/lib/app.js:58:51)",
+              "Object.onceWrapper (node:events:629:26)",
+              "process.emit (node:events:514:28)"
+            ]
+          }
+        ]
+      },
+      "displayName": "CdklamdaStack"
+    }
+  }
+}

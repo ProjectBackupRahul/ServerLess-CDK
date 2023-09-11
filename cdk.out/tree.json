@@ -1,0 +1,351 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.204.0"
+        }
+      },
+      "CdklamdaStack": {
+        "id": "CdklamdaStack",
+        "path": "CdklamdaStack",
+        "children": {
+          "MyLambda": {
+            "id": "MyLambda",
+            "path": "CdklamdaStack/MyLambda",
+            "children": {
+              "Store": {
+                "id": "Store",
+                "path": "CdklamdaStack/MyLambda/Store",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "CdklamdaStack/MyLambda/Store/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                      "aws:cdk:cloudformation:props": {}
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.CfnBucket",
+                      "version": "1.204.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3.Bucket",
+                  "version": "1.204.0"
+                }
+              },
+              "Handler": {
+                "id": "Handler",
+                "path": "CdklamdaStack/MyLambda/Handler",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "CdklamdaStack/MyLambda/Handler/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "CdklamdaStack/MyLambda/Handler/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.204.0"
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "CdklamdaStack/MyLambda/Handler/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "CdklamdaStack/MyLambda/Handler/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "s3:Abort*",
+                                        "s3:DeleteObject*",
+                                        "s3:GetBucket*",
+                                        "s3:GetObject*",
+                                        "s3:List*",
+                                        "s3:PutObject*"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "MyLambdaStore367FEE0E",
+                                            "Arn"
+                                          ]
+                                        },
+                                        {
+                                          "Fn::Join": [
+                                            "",
+                                            [
+                                              {
+                                                "Fn::GetAtt": [
+                                                  "MyLambdaStore367FEE0E",
+                                                  "Arn"
+                                                ]
+                                              },
+                                              "/*"
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "MyLambdaHandlerServiceRoleDefaultPolicy00A48C54",
+                                "roles": [
+                                  {
+                                    "Ref": "MyLambdaHandlerServiceRoleDB13C18A"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                              "version": "1.204.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.Policy",
+                          "version": "1.204.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.204.0"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "CdklamdaStack/MyLambda/Handler/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "CdklamdaStack/MyLambda/Handler/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.AssetStaging",
+                          "version": "1.204.0"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "CdklamdaStack/MyLambda/Handler/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-s3.BucketBase",
+                          "version": "1.204.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                      "version": "1.204.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "CdklamdaStack/MyLambda/Handler/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "AssetParametersd34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713ccS3Bucket123EB8CD"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParametersd34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713ccS3VersionKey7E11D12C"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParametersd34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713ccS3VersionKey7E11D12C"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "role": {
+                          "Fn::GetAtt": [
+                            "MyLambdaHandlerServiceRoleDB13C18A",
+                            "Arn"
+                          ]
+                        },
+                        "environment": {
+                          "variables": {
+                            "BUCKET": {
+                              "Ref": "MyLambdaStore367FEE0E"
+                            }
+                          }
+                        },
+                        "handler": "lambda.main",
+                        "runtime": "nodejs12.x"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                      "version": "1.204.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.Function",
+                  "version": "1.204.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.204.0"
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "CdklamdaStack/AssetParameters",
+            "children": {
+              "d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc": {
+                "id": "d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc",
+                "path": "CdklamdaStack/AssetParameters/d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "CdklamdaStack/AssetParameters/d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.204.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "CdklamdaStack/AssetParameters/d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.204.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "CdklamdaStack/AssetParameters/d34045a576d59c2ade3ae3386823188b31639ae66a1d78af5fe3619f3e9713cc/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.204.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.204.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.204.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "CdklamdaStack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "CdklamdaStack/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.204.0"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "CdklamdaStack/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnCondition",
+                  "version": "1.204.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.204.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.204.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.204.0"
+    }
+  }
+}
